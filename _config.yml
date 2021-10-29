@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 title: no style, please! # name of the site
 author: Riccardo Graziosi # name of site's author
 email: riccardo.graziosi97@gmail.com # email of site's author
@@ -25,3 +26,6 @@ sass:
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+=======
+theme: jekyll-theme-minimal
+>>>>>>> debd38ab4ed6d1d50241cccc0ffa3ee3895555f9
