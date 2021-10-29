@@ -9,7 +9,7 @@ categories:
 光猫设置为桥接模式，建议关闭DHCP服务。家里的TP-link光猫默认管理地址为192.168.1.1
 
 ### 安装镜像
-下载img镜像，在PE环境将磁盘分区删除（不需要再创建），利用工具将img镜像写入磁盘。重启
+<mark>下载img镜像，在PE环境将磁盘分区删除（不需要再创建），利用工具将img镜像写入磁盘。重启<mark>
 
 openwrt默认管理ip为192.168.1.1 若家庭局域网不属于此网段，即修改 /etc/config/network 的ip地址，连接到主路由的lan口，即可在浏览器访问管理界面。
 编辑LAN接口，网关和DNS填写主路由的ip，然后openwrt就可以连网了。opkg update，然后在系统->软件界面，搜索chinese，安装base环境的中文包。
