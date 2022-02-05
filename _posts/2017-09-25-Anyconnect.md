@@ -139,3 +139,26 @@ certtool --to-p12 --load-privkey user-key.pem --pkcs-cipher 3des-pkcs12 --load-c
 anyconnect客户端均使用p12或pfx这种包含密钥的证书，但是安卓端某些型号导入证书可能有bug，而且安卓端的anyconnect无法加载no-route路由表。若启用route，则苹果的客户端连接即断开。
 
 openconnect客户端的证书和密钥分开导入，不需要合成p12格式。但是都不支持no-route路由，一般只用安卓端。安卓端都只支持route分流，但启用route的话，苹果客户端无法连接。
+
+### 吊销证书
+
+如果要禁止已经颁发出去的证书进行登录，可以吊销证书，或者通过登录脚本控制。
+
+在ocserv.conf配置中有connect-script选项，填写脚本路径：
+```
+connect-script=/etc/ocserv/connectscript
+```
+然后创建该脚本，并允许执行：
+```
+#!/bin/sh
+case $USERNAME in
+    userA|userB|userC)
+        exit 1
+        ;;
+        
+    *)  
+        ;;
+esac
+exit 0
+```
+脚本中的用户名称即为要吊销的证书的名称；只要返回值不为0，就不能连接成功。
