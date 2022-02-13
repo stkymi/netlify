@@ -13,6 +13,9 @@ https://pkgs.org/
 ### 修改主机名,重启生效
 `hostnamectl set-hostname NAME`
 
+### 修改系统时区
+`timedatectl set-timezone Asia/Shanghai`
+
 ### CentOS 6 获取不到IP地址
 ```
 vi /etc/sysconfig/network-scripts/ifcfg-eth0
