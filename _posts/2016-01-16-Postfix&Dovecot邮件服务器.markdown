@@ -399,9 +399,9 @@ ssl_key = </root/.caddy/acme/acme-v02.api.letsencrypt.org/sites/domain/domain.ke
 ```
 ~~将`locale/zh_CN/setup.php` 以及 `functions/i18n.php`文件里的`gb2312`改为`utf-8`~~
 
-将by2用户添加到mail组
+将a用户添加到mail组
 ```
-    usermod -a -G mail by2
+    usermod -a -G mail a
 ```
 #### ~~SquirrelMail 常见错误及排除~~
 ~~`ERROR:Connection dropped by IMAP server.` 原因：SquirrelMail找不到用户邮箱的位置。检查邮箱路径设置`mail_location = maildir:/var/mail/vhosts/%d/%n`以及文件夹`/var/mail/vhosts`的归属用户是否正确。~~
